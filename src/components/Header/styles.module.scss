@@ -2,5 +2,29 @@
   width: 100%;
   height: 5.625rem;
   display: flex;
-  color: lightblue;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 3rem;
+  background-color: #19747e;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+.nav {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  gap: 1rem;
+
+  a,
+  span {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+  }
+}
+
+.logout {
+  cursor: pointer;
 }

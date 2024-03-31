@@ -45,10 +45,18 @@ export function Header() {
     <header className={styles.header}>
       <h1>Movies</h1>
       {getToken() && (
-        <nav>
-          <a href="">Movies</a>
-          <a href="">Add movie</a>
-          <a href="">Logout</a>
+        <nav className={styles.nav}>
+          <a href="/movies">Filmes</a>
+          <a href="/add-movie">Cadastrar filme</a>
+          <span
+            className={styles.logout}
+            onClick={() => {
+              localStorage.removeItem("token");
+              navigate("/");
+            }}
+          >
+            Logout
+          </span>
         </nav>
       )}
     </header>
