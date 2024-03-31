@@ -1,0 +1,18 @@
+.item-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+p, strong {
+    font-size: 12px;
+}
+
+p {
+    margin-top: 10px;
+}
+
+.input, .space, .space > div {
+    width: 100%;
+}
