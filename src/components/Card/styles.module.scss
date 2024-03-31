@@ -1,0 +1,35 @@
+.card {
+  width: 20rem;
+  padding: 1rem;
+  border-radius: 0.625rem;
+  background-color: #d1e8e2;
+  color: white;
+  font-family: "Roboto", sans-serif;
+
+  img {
+    width: 18rem;
+    height: 23.4375rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.content {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #19747e;
+}
+
+.button {
+  cursor: pointer;
+  border: none;
+  width: 45%;
+  align-self: flex-end;
+  padding: 0.5rem;
+  background-color: #19747e;
+  color: #d1e8e2;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}

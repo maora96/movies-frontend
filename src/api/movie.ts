@@ -26,7 +26,7 @@ export const getMany = async (request: MovieFilters) => {
     }
   );
 
-  return data.result;
+  return data;
 };
 
 export const create = async (request: CreateMovie) => {

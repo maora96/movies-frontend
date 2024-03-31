@@ -21,7 +21,7 @@ export function Login() {
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm();
+  } = useForm<FormValues>();
 
   const loginMutation = useMutation(
     async (request: SignIn) => signIn(request),
@@ -44,8 +44,7 @@ export function Login() {
     }
   );
 
-  const onSubmit: SubmitHandler<any> = (data) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<FormValues> = (data) => {
     loginMutation.mutate(data);
   };
 

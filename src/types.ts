@@ -34,3 +34,17 @@ export interface UpdateUser {
   email?: string;
   name?: string;
 }
+
+export type Movie = {
+  actors: string[];
+  coverUrl: string;
+  genres: string[];
+  director: string;
+  id: string;
+  summary: string;
+  rating: number;
+  title: string;
+  createdAt: Date;
+  updatedAt: Date;
+  deletedAt: Date | null;
+};
