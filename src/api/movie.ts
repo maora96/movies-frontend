@@ -9,7 +9,7 @@ export const getOne = async (id: string) => {
     },
   });
 
-  return data.result;
+  return data;
 };
 
 export const getMany = async (request: MovieFilters) => {

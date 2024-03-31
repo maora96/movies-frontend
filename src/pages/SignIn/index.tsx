@@ -19,8 +19,8 @@ export function Login() {
   const {
     register,
     handleSubmit,
-    watch,
-    formState: { errors },
+
+    formState: {},
   } = useForm<FormValues>();
 
   const loginMutation = useMutation(
