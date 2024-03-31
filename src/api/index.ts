@@ -9,6 +9,15 @@ export const getToken = () => {
   }
 };
 
+export const getUserRole = () => {
+  const storageUser = localStorage.getItem("user");
+
+  if (storageUser) {
+    const user = JSON.parse(storageUser);
+    return user.role;
+  }
+};
+
 export const api = axios.create({
   baseURL: "http://localhost:3000",
   timeout: 10000,

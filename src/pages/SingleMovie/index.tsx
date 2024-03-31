@@ -8,9 +8,12 @@ import { VoteInBook } from "../../types";
 import { vote } from "../../api/movie";
 import { useGetSingleMovie } from "../../hooks/movie";
 import { SubmitHandler, useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 export function SingleMovie() {
   const navigate = useNavigate();
+  const notifyError = () => toast.error("Erro ao cadastrar voto.");
+  const notifySuccess = () => toast.success("Voto cadastrado com sucesso!");
   let { id } = useParams();
 
   useEffect(() => {
@@ -29,9 +32,12 @@ export function SingleMovie() {
     async (request: VoteInBook) => vote(request),
     {
       onSuccess: () => {
+        notifySuccess();
         refetch();
       },
-      onError: () => {},
+      onError: () => {
+        notifyError();
+      },
     }
   );
 

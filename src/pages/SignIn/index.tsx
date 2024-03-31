@@ -33,6 +33,7 @@ export function Login() {
         const user = {
           email: data.data.email,
           id: data.data.id,
+          role: data.data.role,
         };
         localStorage.setItem("user", JSON.stringify(user));
 

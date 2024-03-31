@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 import styles from "./styles.module.scss";
-import { getToken } from "../../api";
+import { getToken, getUserRole } from "../../api";
 
 export function Header() {
   const navigate = useNavigate();
@@ -12,7 +12,9 @@ export function Header() {
       {getToken() && (
         <nav className={styles.nav}>
           <a href="/movies">Filmes</a>
-          <a href="/add-movie">Cadastrar filme</a>
+          {getUserRole() === "ADMIN" && (
+            <a href="/add-movie">Cadastrar filme</a>
+          )}
           <span
             className={styles.logout}
             onClick={() => {
