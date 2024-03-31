@@ -22,6 +22,7 @@ export function AddMovie() {
   const navigate = useNavigate();
   const notifyError = () => toast.error("Erro na criação de filme.");
   const notifySuccess = () => toast.success("Filme criado com sucesso!");
+
   useEffect(() => {
     if (!getToken()) {
       navigate("/");

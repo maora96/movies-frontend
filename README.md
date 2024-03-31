@@ -1,30 +1,31 @@
-# React + TypeScript + Vite
+# Front end para web app de filmes.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descrição
 
-Currently, two official plugins are available:
+Front end para web app de filmes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Bibliotecas usadas:
 
-## Expanding the ESLint configuration
+- React-Query: para manejar requests e manter os estados dessas requests bem organizados.
+- React-Hook-Form: para criação de formulários simples, com fácil manutenção de condições (requeridos, etc) e fácil implementação.
+- React-Hot-Toast: para prover feedback na hora de criar e/ou votar em filmes.
+- Vite: ao invés de create-react-app ou similares. Vite é mais rápido, de fácil configuração e desenvolvimento.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Instalação
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+$ npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Rodando a app.
+
+Primeiro você precisa rodar o backend (link abaixo).
+
+```bash
+# development
+$ npm run dev
+```
+
+## Mais
+
+[Backend](https://github.com/maora96/movies-backend)
